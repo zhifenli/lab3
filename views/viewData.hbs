@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="viewData.css">
+    <title>Data</title>
+  </head>
+  <body>
+    <div class="main">
+    <h1>Currencies Data</h1>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Min_size</th>
+      </tr>
+      {{#each data}}
+        {{#row @index}}{{/row}}
+          <td>{{id}}</td>
+          <td>{{name}}</td>
+          <td>{{min_size}}</td>
+        </tr>
+      {{else}}
+        <tr>
+          <td colspan="3">No data Available</td>
+        </tr>
+      {{/each}}
+
+    </table>
+    </div>
+  </body>
+</html>
